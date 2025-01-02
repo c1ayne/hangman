@@ -1,5 +1,3 @@
-// сделать валидацию вводимых букв
-
 import java.util.*;
 import java.util.Scanner;
 
@@ -24,6 +22,10 @@ public class Game {
         return isComplete;
     }
 
+    private static boolean validation(char c) {
+        return Character.UnicodeBlock.of(c) == Character.UnicodeBlock.CYRILLIC;
+    }
+
     public static void start() {
         int errors = 0; // errors in this game
         boolean flag = true;
@@ -43,6 +45,7 @@ public class Game {
             System.out.println(errors + "/" + maxErrors + " ошибок");
             Scanner scanner = new Scanner(System.in);
             char newChar = scanner.next().charAt(0);
+            while (!validation(newChar)) newChar = scanner.next().charAt(0);
             if (!word.contains(String.valueOf(newChar)) && !chars.contains(newChar)){
                 errors++;
             }
