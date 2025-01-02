@@ -1,15 +1,35 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+// class Main класс отвечающий за вход в игру
+// class Game класс отвечающий за геймплей игры
+// class Field класс отвечающий за рисовку поля в консоли
+// class Words класс отвечающий за выбор слова
+
+
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Boolean flag = true;
+        Scanner scanner = new Scanner(System.in);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        while (flag) {
+            System.out.println("МЕНЮ\n" +
+                    "Выберите пункт меню:\n" +
+                    "1) Начать новую игру\n" +
+                    "2) Закончить игру\n" +
+                    "Выбор: ");
+
+            String choice = scanner.nextLine();
+
+            switch (choice) {
+                case "1":
+                    Game.start();
+                    break;
+                case "2":
+                    flag = false;
+                    break;
+                default:
+                    System.out.println("Введите 1 или 2 в зависимости от вашего выбора");
+            }
         }
     }
 }
