@@ -11,7 +11,7 @@ public class Game {
             if (chars.contains(i)) hideWord += i;
             else hideWord += "_";
         }
-        System.out.println(hideWord);
+        System.out.print(hideWord + " ");
         return  !hideWord.contains("_");
     }
 
@@ -31,7 +31,7 @@ public class Game {
                 break;
             }
 
-//            System.out.println(errors); // debug print
+            System.out.println(errors + "/" + maxErrors + " ошибок");
             Scanner scanner = new Scanner(System.in);
             char newChar = scanner.next().charAt(0);
             if (!word.contains(String.valueOf(newChar))){
@@ -42,7 +42,7 @@ public class Game {
             if (errors == maxErrors) {
                 Field.paint(errors);
                 flag = false;
-                System.out.println("Вы проиграли");
+                System.out.println("\nВы проиграли");
                 break;
             }
         }
