@@ -5,7 +5,7 @@ Task implementation / Реализация задания
 [TASK](https://zhukovsd.github.io/java-backend-learning-course/projects/hangman/)
 
 ## Description of the game / Описание игры
-[EN]  
+**[EN]**  
 The computer guesses the word. A gallows with a noose is also drawn.
 
 According to the tradition of Russian linguistic games, a word should be
@@ -22,7 +22,7 @@ one part of the torso to the gallows (head, torso, 2 arms and 2 legs).
 If the torso in the gallows is completely drawn, then you lose. If you
 manage to guess the word, you win.  
 
-[RU]  
+**[RU]**  
 Компьютер загадывает слово. Также рисуется виселица с петлёй.
 
 Согласно традиции русских лингвистических игр, слово должно быть именем
