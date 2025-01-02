@@ -8,15 +8,16 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Boolean flag = true;
+        boolean flag = true;
         Scanner scanner = new Scanner(System.in);
 
         while (flag) {
-            System.out.println("\t\tМЕНЮ\n" +
-                    "Выберите пункт меню:\n" +
-                    "1) Начать новую игру\n" +
-                    "2) Закончить игру\n" +
-                    "Выбор: ");
+            System.out.println("""
+                    \t\tМЕНЮ
+                    Выберите пункт меню:
+                    1) Начать новую игру
+                    2) Закончить игру
+                    Выбор:\s""");
 
             String choice = scanner.nextLine();
 

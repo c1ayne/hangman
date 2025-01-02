@@ -3,7 +3,7 @@ import java.util.LinkedList;
 import java.util.Random;
 
 public class Words {
-    private static LinkedList<String> words = new LinkedList<String>(Arrays.asList(
+    private static LinkedList<String> words = new LinkedList<>(Arrays.asList( // слова для игры
             "кухня", "сердце", "кружка", "бутылка", "железо"
     ));
 
