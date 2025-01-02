@@ -6,7 +6,6 @@ public class Game {
     private static String word = Words.choice(); // random word
 
     private static boolean showWord(LinkedList<Character> chars, int errors) { // example: к_х__
-        Field.paint(errors);
         String hideWord = "";
         for (char i : word.toCharArray()){
             if (chars.contains(i)) hideWord += i;
@@ -20,9 +19,11 @@ public class Game {
         int errors = 0; // errors in this game
         boolean flag = true;
         LinkedList<Character> chars = new LinkedList<Character>(); // chars from user
-        System.out.println(word);
+//        System.out.println(word); // debug print
 
         while (flag){
+            System.out.println("\n\n\n\n\n\n\n\n\n");
+            Field.paint(errors);
             boolean win = showWord(chars, errors);
             if (win) {
                 flag = false;
@@ -30,7 +31,7 @@ public class Game {
                 break;
             }
 
-            System.out.println(errors); // test
+//            System.out.println(errors); // debug print
             Scanner scanner = new Scanner(System.in);
             char newChar = scanner.next().charAt(0);
             if (!word.contains(String.valueOf(newChar))){
@@ -39,6 +40,7 @@ public class Game {
             chars.add(newChar);
 
             if (errors == maxErrors) {
+                Field.paint(errors);
                 flag = false;
                 System.out.println("Вы проиграли");
                 break;
