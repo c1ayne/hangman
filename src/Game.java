@@ -44,8 +44,8 @@ public class Game {
 
             System.out.println(errors + "/" + maxErrors + " ошибок");
             Scanner scanner = new Scanner(System.in);
-            char newChar = scanner.next().charAt(0);
-            while (!validation(newChar)) newChar = scanner.next().charAt(0);
+            char newChar = scanner.next().toLowerCase().charAt(0);
+            while (!validation(newChar)) newChar = scanner.next().toLowerCase().charAt(0);
             if (!word.contains(String.valueOf(newChar)) && !chars.contains(newChar)){
                 errors++;
             }
