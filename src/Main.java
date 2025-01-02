@@ -12,7 +12,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         while (flag) {
-            System.out.println("МЕНЮ\n" +
+            System.out.println("\t\tМЕНЮ\n" +
                     "Выберите пункт меню:\n" +
                     "1) Начать новую игру\n" +
                     "2) Закончить игру\n" +
